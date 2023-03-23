@@ -1,0 +1,37 @@
+{% extends 'articles/base.html' %}
+<style>
+  form {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .b-blue {
+    border: 1px solid #00AFFF;
+    border-radius: 10px;
+  }
+
+  .t-blue {
+    color: #00AFFF;
+    background: white;
+  }
+
+  .t-blue:hover {
+    color: white;
+    background: #00AFFF;
+  }
+
+  .shadaw {
+    box-shadow: 0 0 10px lightblue;
+  }
+
+  .m {
+    margin-right: 20px;
+  }
+</style>
+
+{% block content %}
+  <form action="/catch/" method="GET">
+    <input type="text" name="message" class="b-blue shadaw m">
+    <input type="submit" class="btn btn-primary" value="Throw">
+  </form>
+{% endblock content %}
